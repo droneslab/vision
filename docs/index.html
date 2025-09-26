@@ -141,9 +141,15 @@
 
 
               <div class="content has-text-justified">
-                <img style="width:100%;" src="static/images/Vision-Results-NERC.pdf">
+                <img style="width:100%;" src="static/images/VISION-Splash3.pdf">
                 <p>
-                  Preliminary results at Culvert 110 (Gasport, NY). A query image (right) is processed by an open-vocabulary VLM to produce region proposals (red boxes) with natural-language rationales and normalized follow-up probabilities, distributing attention across the scene. The viewpoint planner (center) uses geometry/diameter estimates to generate gimbal-feasible next-best views in the culvert coordinate frame. Executing these poses yields targeted, high-resolution inspection imagery (left), which documents features such as concentrated cracking and rough joints, possible micro-cracking/spalling near the throat, white efflorescence/mineral deposits consistent with moisture ingress, and dark wet staining/pooling indicative of seepage. Together the panels illustrate VISION’s closed-loop see → decide → move → re-image workflow from proposals to actionable, validated observations.
+                  Schematic of the Erie Canal culvert inspection setup. The cross-section of the canal and culvert is drawn to scale, derived from a
+                  3D reconstruction of the site, illustrating the buried drainage conduit, a.k.a. the culvert, beneath the canal embankment. Culverts provide
+                  critical drainage but their confined geometry and location make inspection difficult. A Boston Dynamics Spot quadruped, outfitted with a
+                  custom inspection payload (pan–tilt gimbal, inspection camera with co-located light, VLM proposal camera, and auxiliary LED flood), is
+                  deployed at the culvert entrance and traverses the interior. Insets show the robot at the portal and during inspection runs inside the conduit.
+                  Only the robot payload illustration is not to scale; all other canal and culvert geometry is based on the site reconstruction. The system
+                  autonomously navigates through the 66 m long, 1.2 m diameter culvert, capturing targeted images for structural condition assessment.
                 </p>
               </div>
 
@@ -156,11 +162,11 @@
 </section>
 
 
-<!-- <section class="section hero"></section>
+<section class="section hero "></section>
   <div class="container is-max-desktop">
-    <iframe height="540" width="960" src="https://www.youtube.com/embed/EOGI1pU1G40" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe height="540" width="960" src="https://www.youtube.com/embed/nX56DGGrWxk?si=ii3xg8ZpZLpxs5Xv" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
-</section> -->
+</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -170,7 +176,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The culverts beneath the Erie Canal demand frequent, high-fidelity inspection due to age, wear, and heterogeneous environments. Long-tailed, site-specific degradation modes, limited labeled data, and shifting imaging conditions undermine closed-set detection and segmentation approaches. Open-vocabulary vision–language models (VLMs) offer a path around taxonomy lock-in, but remain difficult to adapt and fine-tune for niche infrastructure domains. We introduce VISION, an end-to-end autonomous inspection pipeline that couples web-scale VLMs with viewpoint planning to close the loop—see → decide → move → re-image. Deployed at Culvert 110 (Gasport, NY), VISION repeatedly and accurately localized, prioritized, and re-imaged defects, capturing targeted, high-resolution inspection imagery while producing structured descriptions that support downstream condition assessment.
+            Culverts on canals such as Erie Canal built originally in 1825 require frequent inspections to ensure safe operation. Human inspection of culverts is challenging due to age, geometry, poor illumination, weather and lack of easy access. We introduce VISION, an end-to-end, language-in-the-loop autonomy system that couples a web-scale vision–language model (VLM) with constrained viewpoint planning for autonomous inspection of culverts. Brief prompts to the VLM solicit open-vocabulary ROI proposals with rationales and confidences, stereo depth is fused to recover scale, and a planner—aware of culvert constraints commands repositioning moves to capture targeted close-ups. Deployed on a quadruped in Culvert under the Erie canal, VISION closes the see→decide→move→re-image loop on-board and produces high-resolution images for detailed reporting without domain-specific fine-tuning. In an external evaluation by New York Canal Corporation personnel, initial ROI proposals achieved 61.4% agreement with subject-matter experts, and final post-re-imaging assessments reached 80%, indicating that VISION converts tentative hypotheses into grounded, expert-aligned findings.
           </p>
         </div>
       </div>
