@@ -162,11 +162,13 @@
 </section>
 
 
-<section class="section hero "></section>
+
+
+<!-- <section class="section hero "></section>
   <div class="container is-max-desktop">
     <iframe height="540" width="960" src="https://www.youtube.com/embed/nX56DGGrWxk?si=ii3xg8ZpZLpxs5Xv" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
-</section>
+</section> -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -185,20 +187,53 @@
 </section>
 <!-- End paper abstract -->
 
-<!--Youtube video -->
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video Presentation</h2>
         <div class="publication-video">
-          <iframe width="1280" height="720" src="https://www.youtube.com/embed/6dDXMJNIMHY?si=hvPRGy5bBFIfJoeV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>Coming Soon!</p>
+          <iframe height="540" width="960" src="https://www.youtube.com/embed/nX56DGGrWxk?si=ii3xg8ZpZLpxs5Xv" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
+
+<!--Youtube video -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results Visualized</h2>
+
+        <!-- Wrap in a Bulma ratio box -->
+        <figure class="image is-16by9" style="max-width: 900px; margin: 0 auto;">
+          <iframe
+            id="rrd-frame"
+            class="has-ratio"
+            src="https://yashturkar.github.io/vision-rrd/"
+            style="border:0;"  
+            allow="fullscreen"
+            loading="lazy"
+          ></iframe>
+        </figure>
+
+        <p class="is-size-7">View fullscreen for best experience</p>
+        <div class="buttons is-centered">
+          <button class="button is-small"
+                  onclick="document.getElementById('rrd-frame').requestFullscreen()">
+            Fullscreen
+          </button>
+          <a class="button is-light is-small" target="_blank" rel="noopener"
+             href="https://yashturkar.github.io/vision-rrd/">
+            Open in new tab
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- End youtube video -->
 
 <!-- Method -->
@@ -229,7 +264,7 @@
 
 
 
-  <section class="section" id="BibTeX">
+  <section class="section is-light" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@inproceedings{turkar2025VISION,
